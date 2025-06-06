@@ -1,0 +1,996 @@
+2025-04-08T17:03:25.831096 [ERROR] RequestID: bb18447c-4e4d-4a47-9f16-389f20dcb96e - PATCH /api/auth - Status: 204 - Response time: 4.653s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 32, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 39, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 41, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Timeout exceeded')
+ServiceUnavailableError: Invalid input
+
+2025-04-08T17:03:25.831308 [WARNING] RequestID: ba71ecec-4ff4-409a-82fc-7489663faae2 - PATCH /api/products - Status: 404 - Response time: 3.792s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Deprecated API endpoint called: /api/orders/v1
+
+2025-04-08T17:03:25.831375 [CRITICAL] RequestID: 82aec83a-fd86-4efb-a0a1-5b40228198c0 - PUT /api/auth - Status: 404 - Response time: 4.707s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 187, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 144, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 82, in execute_query
+    raise AuthenticationError('Failed to process request: Authentication failed')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.831416 [INFO] RequestID: ca698cfd-3fca-49c7-b007-9671da752939 - POST /api/users - Status: 500 - Response time: 2.997s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: CPU usage: 33%
+
+2025-04-08T17:03:25.831445 [DEBUG] RequestID: ad7c5bed-de65-4ac2-ab88-612c0be5c3d3 - POST /api/payments - Status: 403 - Response time: 2.883s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.831466 [DEBUG] RequestID: 17970b1f-0d0e-4cba-828d-85f4df38e65f - GET /api/payments - Status: 404 - Response time: 3.948s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.831481 [INFO] RequestID: 3a8010ac-8447-4f47-b94b-92d2afad6e5d - POST /api/auth - Status: 503 - Response time: 4.91s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Active connections: 498
+
+2025-04-08T17:03:25.831504 [CRITICAL] RequestID: 1db3020e-9e90-4861-a27a-3f39f9ee1961 - GET /api/orders - Status: 400 - Response time: 0.324s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 141, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 148, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 64, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Authentication failed')
+DatabaseConnectionError: Timeout exceeded
+
+2025-04-08T17:03:25.831540 [WARNING] RequestID: 08d27055-5910-41b0-a825-226123245b95 - DELETE /api/payments - Status: 404 - Response time: 0.378s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Memory usage approaching threshold: 77%
+
+2025-04-08T17:03:25.831586 [CRITICAL] RequestID: d5055cc3-2bf0-473b-9860-cd8078e5ef94 - PATCH /api/products - Status: 200 - Response time: 0.538s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 94, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 117, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 88, in execute_query
+    raise AuthenticationError('Failed to process request: Timeout exceeded')
+AuthenticationError: Connection refused
+
+2025-04-08T17:03:25.831636 [DEBUG] RequestID: d18e2a8e-c910-449c-bb36-b4511a6de303 - GET /api/auth - Status: 403 - Response time: 0.55s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.831666 [WARNING] RequestID: 2d05ea16-fb18-406c-9217-171e90b6ddaf - PUT /api/users - Status: 401 - Response time: 4.821s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.240.89
+
+2025-04-08T17:03:25.831702 [CRITICAL] RequestID: 3fab5a5d-1a50-4121-918a-b5734b06b953 - POST /api/users - Status: 403 - Response time: 2.399s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 171, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 27, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 66, in execute_query
+    raise InternalServerError('Failed to process request: Authentication failed')
+InternalServerError: Connection refused
+
+2025-04-08T17:03:25.831730 [DEBUG] RequestID: e0a509fc-8ca9-4bb5-924a-9949bf09d0ac - DELETE /api/products - Status: 204 - Response time: 4.196s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.831745 [CRITICAL] RequestID: 2f96429f-818b-4fc7-94b3-15189b342d57 - POST /api/orders - Status: 401 - Response time: 0.871s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 177, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 77, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 36, in execute_query
+    raise TimeoutError('Failed to process request: Authentication failed')
+TimeoutError: Timeout exceeded
+
+2025-04-08T17:03:25.831771 [INFO] RequestID: e7b17859-1606-4466-b98e-a6ed800e14e4 - GET /api/auth - Status: 404 - Response time: 2.673s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Memory usage: 151MB
+
+2025-04-08T17:03:25.831792 [INFO] RequestID: c78131e7-899f-4c1c-9de8-310e982c3368 - GET /api/auth - Status: 404 - Response time: 4.125s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Active connections: 83
+
+2025-04-08T17:03:25.831814 [ERROR] RequestID: acc89419-320b-458a-808d-00b03aba586d - GET /api/products - Status: 404 - Response time: 2.328s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 184, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 37, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 75, in execute_query
+    raise ValidationError('Failed to process request: Invalid input')
+ValidationError: Authentication failed
+User email: user438@example.com
+
+2025-04-08T17:03:25.831857 [ERROR] RequestID: 0a59de59-16dc-4f54-9b5f-dfcef102ef3e - PUT /api/payments - Status: 401 - Response time: 1.499s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 81, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 77, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 98, in execute_query
+    raise TimeoutError('Failed to process request: Invalid input')
+TimeoutError: Timeout exceeded
+
+2025-04-08T17:03:25.831882 [WARNING] RequestID: c4f1ba26-b628-447a-a50b-b95dd051b783 - PATCH /api/payments - Status: 200 - Response time: 1.253s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.91.205
+
+2025-04-08T17:03:25.832112 [WARNING] RequestID: 7ae2b273-3373-4570-9329-e4649e34d022 - PATCH /api/users - Status: 204 - Response time: 2.085s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Slow database query detected: 1063ms
+
+2025-04-08T17:03:25.832148 [WARNING] RequestID: 9aded426-22f2-421f-965d-36d0fc0133ce - PUT /api/users - Status: 502 - Response time: 2.935s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Deprecated API endpoint called: /api/products/v1
+
+2025-04-08T17:03:25.832170 [DEBUG] RequestID: 82cceba8-951c-401d-a7b6-1a8a4532e38f - DELETE /api/orders - Status: 204 - Response time: 4.371s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Session token: 8198922b-c999-4363-97e4-59b8f87e6663
+
+2025-04-08T17:03:25.832199 [INFO] RequestID: 27bb9de6-9d22-44d3-84d4-299880a5cbbf - PATCH /api/products - Status: 403 - Response time: 4.717s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Active connections: 353
+
+2025-04-08T17:03:25.832219 [CRITICAL] RequestID: fc9b03e6-846b-457d-ae81-44c975b26ac3 - PUT /api/products - Status: 403 - Response time: 4.054s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 32, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 25, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 53, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Timeout exceeded')
+DatabaseConnectionError: Timeout exceeded
+
+2025-04-08T17:03:25.832245 [CRITICAL] RequestID: d45803a7-518a-4090-85f7-254f70437345 - POST /api/payments - Status: 500 - Response time: 3.734s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 94, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 66, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 85, in execute_query
+    raise AuthenticationError('Failed to process request: Connection refused')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.832269 [ERROR] RequestID: 2120e346-9eb3-4ec9-8bd0-b11304569c79 - GET /api/products - Status: 503 - Response time: 1.101s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 109, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 33, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 89, in execute_query
+    raise TimeoutError('Failed to process request: Timeout exceeded')
+TimeoutError: Invalid input
+
+2025-04-08T17:03:25.832292 [DEBUG] RequestID: a29345b1-8893-43fc-a8f6-d8e6eedd9f07 - DELETE /api/products - Status: 204 - Response time: 1.362s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.832306 [WARNING] RequestID: 61d8cf41-6840-47bf-a773-720d724fbc5a - PATCH /api/payments - Status: 401 - Response time: 3.194s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+High CPU usage detected: 83%
+IP address: 192.168.178.15
+
+2025-04-08T17:03:25.832345 [ERROR] RequestID: ca1037b5-9b1b-4720-8e85-6d8480c20adf - POST /api/payments - Status: 200 - Response time: 2.039s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 135, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 36, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 41, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Connection refused')
+DatabaseConnectionError: Authentication failed
+
+2025-04-08T17:03:25.832379 [INFO] RequestID: 4ba590b3-8a58-4c6f-8e6d-bad7b9ba4461 - PATCH /api/users - Status: 500 - Response time: 3.741s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: CPU usage: 13%
+
+2025-04-08T17:03:25.832406 [ERROR] RequestID: a4bea23c-778e-4495-b418-dc30fb82368a - PUT /api/users - Status: 403 - Response time: 4.577s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 99, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 54, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 97, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Timeout exceeded')
+ServiceUnavailableError: Connection refused
+
+2025-04-08T17:03:25.832433 [ERROR] RequestID: 2818afe4-6750-44d5-a6c0-bc99cdecd957 - POST /api/payments - Status: 500 - Response time: 1.989s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 162, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 83, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 69, in execute_query
+    raise ValidationError('Failed to process request: Timeout exceeded')
+ValidationError: Invalid input
+User email: user788@example.com
+
+2025-04-08T17:03:25.832488 [DEBUG] RequestID: 55c1f1c7-43f6-41cf-88aa-6d677fee48d4 - DELETE /api/products - Status: 500 - Response time: 4.267s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.832507 [WARNING] RequestID: 5eb156e1-5b77-4e5e-a73b-b890f30a0254 - GET /api/auth - Status: 401 - Response time: 3.506s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Deprecated API endpoint called: /api/payments/v1
+
+2025-04-08T17:03:25.832537 [CRITICAL] RequestID: aa6beaa5-83fd-4b23-a0d5-15dd49445402 - DELETE /api/payments - Status: 204 - Response time: 0.855s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 69, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 121, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 79, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Timeout exceeded')
+DatabaseConnectionError: Connection refused
+IP address: 192.168.148.220
+
+2025-04-08T17:03:25.832583 [INFO] RequestID: 94a30417-f95f-44a5-a816-b234e68d6b40 - GET /api/auth - Status: 200 - Response time: 4.534s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Queue size: 3
+
+2025-04-08T17:03:25.832610 [WARNING] RequestID: 65a6e00a-3a68-4852-adb6-64c7a229e069 - PATCH /api/users - Status: 503 - Response time: 2.72s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Memory usage approaching threshold: 75%
+
+2025-04-08T17:03:25.832635 [CRITICAL] RequestID: 07371e5f-ed30-447b-a4be-3dcc37be376d - DELETE /api/auth - Status: 403 - Response time: 0.014s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 86, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 146, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 43, in execute_query
+    raise ValidationError('Failed to process request: Invalid input')
+ValidationError: Authentication failed
+
+2025-04-08T17:03:25.832664 [WARNING] RequestID: 05c289fe-3d8c-4321-83de-49935aa6c2bd - PUT /api/orders - Status: 403 - Response time: 2.991s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Memory usage approaching threshold: 90%
+
+2025-04-08T17:03:25.832820 [INFO] RequestID: bad5efa2-0ee4-4f52-9c32-e59ca7822e2d - PUT /api/payments - Status: 401 - Response time: 2.557s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Cache hit ratio: 99%
+User email: user697@example.com
+
+2025-04-08T17:03:25.832920 [CRITICAL] RequestID: f8fc02a9-0266-42e2-b760-723f49bea847 - PUT /api/payments - Status: 404 - Response time: 2.023s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 138, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 95, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 33, in execute_query
+    raise ValidationError('Failed to process request: Connection refused')
+ValidationError: Authentication failed
+
+2025-04-08T17:03:25.832962 [CRITICAL] RequestID: afeb63a8-b240-4b6a-9553-c09b509424fa - PUT /api/products - Status: 403 - Response time: 1.605s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 192, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 71, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 94, in execute_query
+    raise AuthenticationError('Failed to process request: Timeout exceeded')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.832993 [ERROR] RequestID: 5abe9bfc-1358-45e8-a585-b566af1b3a02 - PATCH /api/users - Status: 400 - Response time: 0.505s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 133, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 109, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 40, in execute_query
+    raise TimeoutError('Failed to process request: Authentication failed')
+TimeoutError: Authentication failed
+
+2025-04-08T17:03:25.833022 [WARNING] RequestID: 596e602a-ce8e-48b9-bada-1b644862269f - GET /api/products - Status: 204 - Response time: 4.155s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Deprecated API endpoint called: /api/auth/v1
+
+2025-04-08T17:03:25.833048 [WARNING] RequestID: 300faeb1-2b0a-4e68-8f2c-ae7ec1230e67 - PUT /api/users - Status: 404 - Response time: 4.326s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+High CPU usage detected: 100%
+
+2025-04-08T17:03:25.833073 [WARNING] RequestID: be98da70-740f-4971-8d22-ae56b450f772 - POST /api/orders - Status: 401 - Response time: 4.259s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Memory usage approaching threshold: 87%
+Session token: bd628b24-4f2e-4ce5-869f-ff10f420faa3
+
+2025-04-08T17:03:25.833110 [INFO] RequestID: 3aea41f4-322c-4d5e-babe-46c76fa25b60 - DELETE /api/auth - Status: 502 - Response time: 3.295s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: CPU usage: 16%
+
+2025-04-08T17:03:25.833134 [ERROR] RequestID: 3647bfe2-d341-4778-a23b-abbd39e94660 - PATCH /api/auth - Status: 204 - Response time: 0.205s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 150, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 95, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 71, in execute_query
+    raise ValidationError('Failed to process request: Timeout exceeded')
+ValidationError: Invalid input
+
+2025-04-08T17:03:25.833162 [ERROR] RequestID: f09b945f-8800-4775-a4cf-4d500e5f57f3 - POST /api/orders - Status: 401 - Response time: 3.374s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 61, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 46, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 37, in execute_query
+    raise AuthenticationError('Failed to process request: Timeout exceeded')
+AuthenticationError: Invalid input
+
+2025-04-08T17:03:25.833189 [WARNING] RequestID: a26d6843-e20c-48fe-8b73-b83cc226a57e - DELETE /api/payments - Status: 503 - Response time: 0.385s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Deprecated API endpoint called: /api/users/v1
+
+2025-04-08T17:03:25.833212 [CRITICAL] RequestID: aab9e949-1f14-421e-9679-826aa378dd5c - PATCH /api/users - Status: 500 - Response time: 4.555s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 93, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 69, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 30, in execute_query
+    raise InternalServerError('Failed to process request: Invalid input')
+InternalServerError: Connection refused
+
+2025-04-08T17:03:25.833238 [ERROR] RequestID: 81a2accb-4ab7-499c-a841-879e56fea2a5 - DELETE /api/orders - Status: 400 - Response time: 3.054s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 74, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 137, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 93, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Invalid input')
+ServiceUnavailableError: Authentication failed
+
+2025-04-08T17:03:25.833263 [INFO] RequestID: aa63333e-a6c6-4d64-994e-194e6bacce02 - PATCH /api/products - Status: 403 - Response time: 3.318s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Queue size: 83
+
+2025-04-08T17:03:25.833285 [DEBUG] RequestID: 06300bef-e2b1-4a6a-a30b-e4a870d9d8d2 - DELETE /api/auth - Status: 500 - Response time: 1.065s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.833300 [INFO] RequestID: 47dd194d-4a32-4477-a7ea-4f2076b89feb - PUT /api/users - Status: 502 - Response time: 1.528s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Cache hit ratio: 77%
+
+2025-04-08T17:03:25.833322 [WARNING] RequestID: 0536c3e3-dffd-40cc-a95f-d2fad353ce1b - POST /api/payments - Status: 404 - Response time: 4.276s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+High CPU usage detected: 96%
+Credit card: **** **** **** 9156
+
+2025-04-08T17:03:25.833355 [INFO] RequestID: eb5aa72a-04a4-4338-80a9-c1e7652ea841 - PATCH /api/payments - Status: 204 - Response time: 4.896s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Queue size: 95
+User email: user601@example.com
+
+2025-04-08T17:03:25.833389 [WARNING] RequestID: e00888c1-3cf5-42eb-bf46-27bd402925c2 - POST /api/auth - Status: 500 - Response time: 4.248s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+High CPU usage detected: 80%
+
+2025-04-08T17:03:25.833410 [INFO] RequestID: aaf44ab4-94e8-4d82-bac5-ababd20e075e - GET /api/orders - Status: 503 - Response time: 3.923s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Active connections: 269
+
+2025-04-08T17:03:25.833430 [ERROR] RequestID: 83af6037-4774-4369-8b8c-648d600fa74a - GET /api/orders - Status: 503 - Response time: 4.437s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 151, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 84, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 97, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Connection refused
+
+2025-04-08T17:03:25.833481 [INFO] RequestID: 16754393-71b7-4c17-aa20-a543c38243e7 - GET /api/users - Status: 201 - Response time: 3.079s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Queue size: 66
+
+2025-04-08T17:03:25.833506 [INFO] RequestID: db825c27-ddba-43de-aaab-ceb5fedf06e3 - PUT /api/products - Status: 400 - Response time: 3.013s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Memory usage: 115MB
+
+2025-04-08T17:03:25.833526 [WARNING] RequestID: 7c5db3c3-be73-4506-924f-6e5e73afd079 - GET /api/auth - Status: 400 - Response time: 0.1s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Rate limit approaching for IP: 192.168.88.19
+User ID: 1038
+
+2025-04-08T17:03:25.833560 [WARNING] RequestID: 906d62a8-1794-4c4a-9b7d-0c21b22c0500 - DELETE /api/auth - Status: 400 - Response time: 2.713s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.113.18
+
+2025-04-08T17:03:25.833582 [DEBUG] RequestID: b4c6b6e0-b65c-4a75-bfd6-92d4c85570ff - GET /api/users - Status: 200 - Response time: 2.915s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.833597 [ERROR] RequestID: f277a1bc-0355-4c09-b1c8-2f0d70aed04e - PUT /api/payments - Status: 503 - Response time: 4.002s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 156, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 122, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 50, in execute_query
+    raise AuthenticationError('Failed to process request: Authentication failed')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.833622 [ERROR] RequestID: 85749bf0-8938-4064-83df-e0816ba13df5 - DELETE /api/products - Status: 401 - Response time: 4.188s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 47, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 40, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 34, in execute_query
+    raise TimeoutError('Failed to process request: Timeout exceeded')
+TimeoutError: Authentication failed
+
+2025-04-08T17:03:25.833649 [CRITICAL] RequestID: fe52728a-b568-4d42-bf93-b181cc2600af - PUT /api/auth - Status: 204 - Response time: 0.963s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 200, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 59, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 60, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Invalid input')
+DatabaseConnectionError: Authentication failed
+
+2025-04-08T17:03:25.833674 [CRITICAL] RequestID: a0193832-29ae-426d-b67b-47a95652b842 - PUT /api/products - Status: 200 - Response time: 1.983s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 178, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 69, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 82, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Authentication failed
+
+2025-04-08T17:03:25.833699 [DEBUG] RequestID: 591a5e77-a45c-4a1b-9e9b-65ee29794951 - GET /api/products - Status: 403 - Response time: 2.683s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.833714 [WARNING] RequestID: 0ecca879-99e5-4eca-8895-24a67b8b659e - PATCH /api/products - Status: 502 - Response time: 1.375s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+High CPU usage detected: 92%
+User email: user433@example.com
+
+2025-04-08T17:03:25.833746 [CRITICAL] RequestID: 43640aba-a3fe-4b43-ad88-788ea9424ca1 - PATCH /api/products - Status: 204 - Response time: 0.702s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 87, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 85, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 63, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Connection refused')
+DatabaseConnectionError: Timeout exceeded
+Session token: 1c5480f2-86a5-4733-a52b-b43fd80d99eb
+
+2025-04-08T17:03:25.833784 [ERROR] RequestID: c020b5f7-1cd5-454b-9b72-9757c6cced34 - PUT /api/users - Status: 503 - Response time: 4.458s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 108, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 99, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 39, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Invalid input')
+DatabaseConnectionError: Connection refused
+
+2025-04-08T17:03:25.833810 [ERROR] RequestID: 66de9233-b625-4883-a24e-295a358acab9 - PUT /api/users - Status: 204 - Response time: 0.693s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 86, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 80, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 91, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Invalid input')
+ServiceUnavailableError: Connection refused
+
+2025-04-08T17:03:25.833835 [CRITICAL] RequestID: bddadcda-56f8-4102-957e-e10b6ecaa7f9 - GET /api/auth - Status: 204 - Response time: 3.965s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 104, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 95, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 63, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Connection refused')
+ServiceUnavailableError: Timeout exceeded
+
+2025-04-08T17:03:25.833860 [INFO] RequestID: dc3d85ab-b429-407e-82f3-b9b973e585b1 - PATCH /api/users - Status: 403 - Response time: 2.812s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: CPU usage: 46%
+
+2025-04-08T17:03:25.833880 [ERROR] RequestID: b74fe1bb-d6f9-427b-9c07-2ef2dcab78f0 - POST /api/users - Status: 204 - Response time: 0.563s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 178, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 123, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 58, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Timeout exceeded
+
+2025-04-08T17:03:25.833903 [INFO] RequestID: 449cccce-b28f-4b09-a04a-f1c487b70708 - DELETE /api/payments - Status: 200 - Response time: 2.802s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Cache hit ratio: 83%
+
+2025-04-08T17:03:25.833969 [INFO] RequestID: 5530b893-9674-4a12-8b7c-a894c000115c - POST /api/payments - Status: 403 - Response time: 2.569s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Cache hit ratio: 93%
+
+2025-04-08T17:03:25.833993 [ERROR] RequestID: 9fdab1d3-f32e-4099-ab0d-2034a85cc94c - DELETE /api/payments - Status: 201 - Response time: 4.499s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 130, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 106, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 82, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Authentication failed')
+ServiceUnavailableError: Connection refused
+
+2025-04-08T17:03:25.834017 [DEBUG] RequestID: 89b5fbcd-4b08-414a-9f74-dd1742143316 - POST /api/products - Status: 500 - Response time: 4.527s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.834030 [INFO] RequestID: df3c9806-6a0e-4eac-ae45-b5d10c6225a3 - PUT /api/orders - Status: 401 - Response time: 2.006s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Active connections: 144
+
+2025-04-08T17:03:25.834049 [INFO] RequestID: 5608b2f3-79bf-4a10-ac9b-7ab23947043d - GET /api/orders - Status: 500 - Response time: 4.862s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Queue size: 96
+
+2025-04-08T17:03:25.834066 [CRITICAL] RequestID: f2cda1cd-ec96-409d-b505-7897f1348596 - DELETE /api/payments - Status: 502 - Response time: 2.902s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 31, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 54, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 94, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Timeout exceeded')
+ServiceUnavailableError: Invalid input
+
+2025-04-08T17:03:25.834089 [CRITICAL] RequestID: 7ca2584e-82bc-423b-bd2e-0e9e55938ef1 - PUT /api/orders - Status: 502 - Response time: 0.82s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 157, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 106, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 87, in execute_query
+    raise InternalServerError('Failed to process request: Invalid input')
+InternalServerError: Authentication failed
+User ID: 3156
+
+2025-04-08T17:03:25.834126 [WARNING] RequestID: d2f0e914-5ae1-4884-91aa-99a322ce4635 - GET /api/users - Status: 400 - Response time: 3.465s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+High CPU usage detected: 90%
+
+2025-04-08T17:03:25.834146 [CRITICAL] RequestID: c2cb6efe-f58b-4d91-a587-772eb05e80de - PATCH /api/auth - Status: 403 - Response time: 3.725s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 61, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 138, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 40, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Timeout exceeded')
+DatabaseConnectionError: Timeout exceeded
+
+2025-04-08T17:03:25.834169 [ERROR] RequestID: 62cd019c-778f-4601-a8d7-7aaf70789741 - PUT /api/products - Status: 400 - Response time: 2.15s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 139, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 36, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 39, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Connection refused')
+DatabaseConnectionError: Connection refused
+
+2025-04-08T17:03:25.834192 [CRITICAL] RequestID: 6fc4752f-b5f7-4a4f-ae38-de891b9dcbfd - POST /api/auth - Status: 204 - Response time: 0.331s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 80, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 139, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 60, in execute_query
+    raise InternalServerError('Failed to process request: Authentication failed')
+InternalServerError: Authentication failed
+
+2025-04-08T17:03:25.834215 [INFO] RequestID: b791a8ef-3c3e-4cf3-a679-991926b8d45b - DELETE /api/payments - Status: 502 - Response time: 3.812s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Active connections: 10
+
+2025-04-08T17:03:25.834233 [DEBUG] RequestID: 5189b685-fb36-4b0b-ae07-5a8c501d9a4f - POST /api/orders - Status: 503 - Response time: 3.851s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834247 [ERROR] RequestID: 6f4e3f77-266a-464f-8dcf-e9b494ff6539 - DELETE /api/auth - Status: 400 - Response time: 1.246s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 183, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 96, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 44, in execute_query
+    raise InternalServerError('Failed to process request: Connection refused')
+InternalServerError: Invalid input
+
+2025-04-08T17:03:25.834269 [WARNING] RequestID: f7758e99-dc73-4c07-abc7-811904a9b9d7 - GET /api/products - Status: 201 - Response time: 4.528s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Deprecated API endpoint called: /api/products/v1
+
+2025-04-08T17:03:25.834288 [INFO] RequestID: ece1d1e2-675e-46c4-90c9-6c32112cee4b - PATCH /api/users - Status: 204 - Response time: 4.576s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Queue size: 29
+
+2025-04-08T17:03:25.834307 [CRITICAL] RequestID: 67ad4848-3d63-4b6a-b9f8-d5b51fac8529 - PUT /api/payments - Status: 502 - Response time: 3.917s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 92, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 87, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 67, in execute_query
+    raise InternalServerError('Failed to process request: Invalid input')
+InternalServerError: Authentication failed
+
+2025-04-08T17:03:25.834330 [INFO] RequestID: 04f93399-9bf8-4d5a-b413-ebc15753a6e2 - PUT /api/orders - Status: 503 - Response time: 3.413s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: CPU usage: 40%
+
+2025-04-08T17:03:25.834348 [DEBUG] RequestID: 8d632f45-b086-409d-9dfa-1c1dda2c59eb - PATCH /api/payments - Status: 201 - Response time: 4.437s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834361 [ERROR] RequestID: 172c6e02-d7a1-451b-b4a4-ba9c4896b7c0 - DELETE /api/products - Status: 201 - Response time: 3.382s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 26, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 127, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 88, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Authentication failed')
+ServiceUnavailableError: Authentication failed
+
+2025-04-08T17:03:25.834403 [INFO] RequestID: 4b06fa32-1589-49a8-a794-f99709fada0d - PUT /api/orders - Status: 404 - Response time: 2.584s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Active connections: 24
+
+2025-04-08T17:03:25.834424 [WARNING] RequestID: caf93c88-554f-41cc-bc12-2029899c6ea7 - POST /api/auth - Status: 503 - Response time: 3.176s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Deprecated API endpoint called: /api/products/v1
+
+2025-04-08T17:03:25.834444 [CRITICAL] RequestID: f324fd54-0618-4bc9-a935-78156352aff8 - PATCH /api/orders - Status: 503 - Response time: 1.712s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 49, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 61, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 67, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Timeout exceeded')
+ServiceUnavailableError: Connection refused
+IP address: 192.168.236.75
+
+2025-04-08T17:03:25.834476 [WARNING] RequestID: 3f97bd51-bcef-4b2b-98cf-1da004368ee1 - GET /api/orders - Status: 400 - Response time: 2.906s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Slow database query detected: 1169ms
+
+2025-04-08T17:03:25.834497 [INFO] RequestID: 86354bbe-891b-41fe-8a6f-3bb8b6c3f62b - POST /api/payments - Status: 503 - Response time: 1.191s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: CPU usage: 12%
+
+2025-04-08T17:03:25.834515 [ERROR] RequestID: 8944060c-1a84-4143-a606-c758f9458fe8 - PATCH /api/auth - Status: 200 - Response time: 4.946s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 87, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 96, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 32, in execute_query
+    raise InternalServerError('Failed to process request: Invalid input')
+InternalServerError: Connection refused
+
+2025-04-08T17:03:25.834538 [ERROR] RequestID: 262b0057-a266-475a-8af4-2114afcc31ca - DELETE /api/products - Status: 503 - Response time: 2.871s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 129, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 131, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 50, in execute_query
+    raise ValidationError('Failed to process request: Invalid input')
+ValidationError: Connection refused
+
+2025-04-08T17:03:25.834560 [DEBUG] RequestID: 49ffa756-c334-4f7e-8c7d-8cc59ded314e - PUT /api/auth - Status: 400 - Response time: 1.507s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834574 [DEBUG] RequestID: fb7f98c6-bb5d-45fb-b518-e0faf8fa21c9 - DELETE /api/payments - Status: 404 - Response time: 3.042s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.834586 [ERROR] RequestID: 5aa3412a-007d-406b-851c-f5ac2d25afd9 - POST /api/products - Status: 400 - Response time: 2.273s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 95, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 70, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 53, in execute_query
+    raise ValidationError('Failed to process request: Connection refused')
+ValidationError: Invalid input
+
+2025-04-08T17:03:25.834607 [CRITICAL] RequestID: e2980dca-1abc-4471-943e-42ed9fc9e855 - DELETE /api/users - Status: 201 - Response time: 2.565s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 171, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 95, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 84, in execute_query
+    raise AuthenticationError('Failed to process request: Timeout exceeded')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.834628 [INFO] RequestID: 49bf9f9d-124c-4d59-91c4-911b4201534c - POST /api/auth - Status: 502 - Response time: 2.434s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Memory usage: 626MB
+
+2025-04-08T17:03:25.834645 [DEBUG] RequestID: 199894e8-bc3d-406c-90e9-2aa222d72603 - DELETE /api/auth - Status: 404 - Response time: 3.686s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834657 [DEBUG] RequestID: e9597d85-f964-43d4-9a4c-9a634c9fa95c - PATCH /api/users - Status: 400 - Response time: 3.652s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834669 [ERROR] RequestID: f7176373-ac82-41cf-aa6c-05f237f8391c - PATCH /api/products - Status: 401 - Response time: 1.075s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 13, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 108, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 48, in execute_query
+    raise AuthenticationError('Failed to process request: Invalid input')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.834689 [CRITICAL] RequestID: 81564eff-e87d-4633-aabe-5f8b1e6fe643 - PATCH /api/orders - Status: 503 - Response time: 4.506s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 72, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 26, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 84, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Authentication failed
+
+2025-04-08T17:03:25.834710 [CRITICAL] RequestID: 8adb1368-fdab-41c5-9ea8-20444866a51c - PUT /api/users - Status: 403 - Response time: 1.24s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 188, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 129, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 92, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Timeout exceeded
+
+2025-04-08T17:03:25.834730 [DEBUG] RequestID: 319f0eaa-eaff-4e81-96f7-9898cb6a92a2 - POST /api/products - Status: 204 - Response time: 1.286s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.834763 [WARNING] RequestID: caf9c442-4c18-4d2a-bbb7-4343069e0d80 - DELETE /api/auth - Status: 502 - Response time: 4.076s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.85.207
+
+2025-04-08T17:03:25.834783 [INFO] RequestID: 11f56044-0276-4bee-8af0-e8c8ec335b40 - DELETE /api/auth - Status: 503 - Response time: 3.081s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: CPU usage: 40%
+
+2025-04-08T17:03:25.834847 [WARNING] RequestID: d4f32227-4484-45eb-a00e-07f67367f821 - PATCH /api/orders - Status: 401 - Response time: 1.881s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+High CPU usage detected: 93%
+
+2025-04-08T17:03:25.834871 [INFO] RequestID: 5f80da12-f1dd-4ad9-9a81-53aeb5562d05 - GET /api/payments - Status: 403 - Response time: 0.029s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Active connections: 167
+
+2025-04-08T17:03:25.834890 [ERROR] RequestID: f6c6da2c-6668-4259-a9b8-371cde1fdfb9 - DELETE /api/users - Status: 500 - Response time: 0.068s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 178, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 120, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 85, in execute_query
+    raise AuthenticationError('Failed to process request: Connection refused')
+AuthenticationError: Timeout exceeded
+
+2025-04-08T17:03:25.834912 [CRITICAL] RequestID: 0d406ac7-33a3-41d1-8ad5-4d10d29f39f0 - GET /api/auth - Status: 401 - Response time: 4.208s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 151, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 149, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 34, in execute_query
+    raise ValidationError('Failed to process request: Authentication failed')
+ValidationError: Authentication failed
+
+2025-04-08T17:03:25.834934 [ERROR] RequestID: 7368d1fc-a901-4422-bbff-8ac6386811cf - PATCH /api/users - Status: 401 - Response time: 3.783s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 70, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 79, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 38, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Invalid input')
+ServiceUnavailableError: Connection refused
+
+2025-04-08T17:03:25.834955 [ERROR] RequestID: fb627495-b16a-4df0-b484-f174c28d5d5b - DELETE /api/auth - Status: 404 - Response time: 1.643s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 112, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 45, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 31, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Connection refused')
+ServiceUnavailableError: Authentication failed
+
+2025-04-08T17:03:25.834976 [INFO] RequestID: 4236e611-2590-4c18-a419-b6f225c6f6bc - POST /api/products - Status: 500 - Response time: 2.99s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Active connections: 352
+
+2025-04-08T17:03:25.834994 [WARNING] RequestID: baf07ca8-bc91-4ff8-8682-2c9f422fdef4 - PATCH /api/payments - Status: 204 - Response time: 4.444s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Slow database query detected: 1539ms
+
+2025-04-08T17:03:25.835013 [DEBUG] RequestID: c53b1803-bdc1-4a30-b29a-899e59aece27 - GET /api/auth - Status: 502 - Response time: 2.788s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835026 [INFO] RequestID: 2aa6080a-5c10-40c4-acd6-64cd710d043a - DELETE /api/users - Status: 404 - Response time: 0.192s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Cache hit ratio: 92%
+
+2025-04-08T17:03:25.835042 [WARNING] RequestID: 816bf0e4-d649-4923-9b54-efec93be3e63 - DELETE /api/payments - Status: 500 - Response time: 3.684s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Memory usage approaching threshold: 94%
+
+2025-04-08T17:03:25.835061 [WARNING] RequestID: 44f540d9-c0a4-41d7-9b5b-f9ed4a0fe35c - DELETE /api/products - Status: 403 - Response time: 1.732s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+High CPU usage detected: 91%
+
+2025-04-08T17:03:25.835079 [CRITICAL] RequestID: 9bbee885-4b18-4e8f-ab35-8a42181f0d12 - PUT /api/payments - Status: 200 - Response time: 4.085s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 77, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 134, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 75, in execute_query
+    raise ValidationError('Failed to process request: Connection refused')
+ValidationError: Connection refused
+
+2025-04-08T17:03:25.835100 [INFO] RequestID: 74077c26-6e7c-4265-a7c4-297f5797f859 - PUT /api/payments - Status: 204 - Response time: 2.831s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Queue size: 93
+
+2025-04-08T17:03:25.835117 [INFO] RequestID: 57c115b9-6b55-4132-9632-449463579d7c - DELETE /api/orders - Status: 200 - Response time: 4.851s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Active connections: 177
+
+2025-04-08T17:03:25.835134 [INFO] RequestID: 7099b89d-6045-4fcd-afac-a09e8e7d83d8 - PATCH /api/users - Status: 401 - Response time: 2.551s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Active connections: 434
+
+2025-04-08T17:03:25.835151 [CRITICAL] RequestID: 2319c228-b79e-4e3f-a4da-dfb466d02f04 - PATCH /api/auth - Status: 503 - Response time: 1.01s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 22, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 62, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 97, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Timeout exceeded')
+DatabaseConnectionError: Invalid input
+
+2025-04-08T17:03:25.835171 [ERROR] RequestID: bde638f4-b5ce-4e5a-b1fb-fa91f4b6c63d - PATCH /api/users - Status: 500 - Response time: 4.069s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 108, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 114, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 88, in execute_query
+    raise ValidationError('Failed to process request: Connection refused')
+ValidationError: Timeout exceeded
+
+2025-04-08T17:03:25.835192 [INFO] RequestID: 2135e1ef-98fe-4633-a39b-6076c400c45c - POST /api/users - Status: 204 - Response time: 4.591s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: CPU usage: 18%
+
+2025-04-08T17:03:25.835210 [DEBUG] RequestID: 295b0fd5-51cf-46b9-9b1d-b9de695dcf08 - POST /api/orders - Status: 200 - Response time: 2.61s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835223 [DEBUG] RequestID: c275d41e-1fd1-4fec-a0f1-fd45a8eec601 - GET /api/orders - Status: 500 - Response time: 4.354s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835235 [INFO] RequestID: e09bf577-139a-4bbc-9db6-7dca9eb6c2e3 - POST /api/users - Status: 502 - Response time: 0.856s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: CPU usage: 16%
+
+2025-04-08T17:03:25.835267 [WARNING] RequestID: 2e5f4a70-b052-4ba6-ad76-2ae0fee93c27 - POST /api/auth - Status: 204 - Response time: 4.844s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+High CPU usage detected: 94%
+
+2025-04-08T17:03:25.835288 [WARNING] RequestID: 22fa6534-35af-410f-b210-19cd08821b25 - PATCH /api/users - Status: 403 - Response time: 0.35s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Deprecated API endpoint called: /api/payments/v1
+
+2025-04-08T17:03:25.835308 [WARNING] RequestID: edf7736f-9586-484c-a9b6-766118499bfd - PUT /api/products - Status: 201 - Response time: 3.737s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+High CPU usage detected: 81%
+
+2025-04-08T17:03:25.835328 [WARNING] RequestID: 9770ae50-f788-4968-8ac0-96b442f8fa77 - GET /api/products - Status: 201 - Response time: 1.382s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+High CPU usage detected: 95%
+
+2025-04-08T17:03:25.835346 [DEBUG] RequestID: ee8f4322-a817-4512-a1d2-1d93f23fd577 - PATCH /api/payments - Status: 204 - Response time: 1.488s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+User email: user802@example.com
+
+2025-04-08T17:03:25.835369 [DEBUG] RequestID: 09b24d1c-71e1-4c5f-8c42-eee3becf0abe - GET /api/auth - Status: 201 - Response time: 1.847s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.835382 [CRITICAL] RequestID: 68cd6314-7a94-4649-8263-07817bc94c62 - DELETE /api/users - Status: 201 - Response time: 0.979s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 136, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 62, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 67, in execute_query
+    raise DatabaseConnectionError('Failed to process request: Connection refused')
+DatabaseConnectionError: Connection refused
+
+2025-04-08T17:03:25.835403 [CRITICAL] RequestID: a9100f85-58af-460e-b525-f5aa5197f10a - DELETE /api/orders - Status: 400 - Response time: 2.064s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 175, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 130, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 59, in execute_query
+    raise TimeoutError('Failed to process request: Connection refused')
+TimeoutError: Authentication failed
+
+2025-04-08T17:03:25.835424 [DEBUG] RequestID: c0327968-66d2-49a2-8065-dfa26bce5cae - GET /api/users - Status: 403 - Response time: 2.597s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.835437 [DEBUG] RequestID: 258c65ea-c29e-491d-8403-cc45ac50d17c - PATCH /api/auth - Status: 200 - Response time: 1.366s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835449 [INFO] RequestID: 44a87d9d-b64e-4447-a504-609717a7a1d2 - PUT /api/products - Status: 503 - Response time: 2.597s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: CPU usage: 48%
+
+2025-04-08T17:03:25.835466 [INFO] RequestID: e0098550-bbc9-441a-83bb-5546dae1616b - PATCH /api/products - Status: 500 - Response time: 3.026s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: CPU usage: 26%
+
+2025-04-08T17:03:25.835482 [ERROR] RequestID: a1cc97b4-aa5a-41ff-922a-be966df83378 - POST /api/orders - Status: 200 - Response time: 1.448s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 11, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 43, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 32, in execute_query
+    raise ValidationError('Failed to process request: Connection refused')
+ValidationError: Timeout exceeded
+
+2025-04-08T17:03:25.835504 [INFO] RequestID: 5a6de007-cc1b-41d5-9157-b5624c035277 - PUT /api/products - Status: 500 - Response time: 1.294s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Queue size: 72
+
+2025-04-08T17:03:25.835522 [INFO] RequestID: 9ca173d8-cc2a-4e28-9c9b-af82df5260a7 - PUT /api/products - Status: 403 - Response time: 0.395s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Memory usage: 410MB
+
+2025-04-08T17:03:25.835539 [DEBUG] RequestID: e3cc7389-fc86-4163-8f25-fc0ec3141a70 - DELETE /api/payments - Status: 403 - Response time: 3.09s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.835551 [DEBUG] RequestID: f33b1a47-196b-42ee-9c5f-e2e80254e614 - PUT /api/payments - Status: 403 - Response time: 2.0s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835564 [INFO] RequestID: f86d0f6d-1011-4fc9-ba66-4b1db27fa88e - GET /api/orders - Status: 404 - Response time: 2.908s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Active connections: 269
+
+2025-04-08T17:03:25.835588 [INFO] RequestID: f81a63c3-bdba-4c54-896d-60d23d2d175c - DELETE /api/auth - Status: 200 - Response time: 3.687s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Cache hit ratio: 94%
+
+2025-04-08T17:03:25.835623 [WARNING] RequestID: 890544c6-8603-4bcc-a5a8-320e20feeb6c - PUT /api/orders - Status: 403 - Response time: 3.01s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Memory usage approaching threshold: 90%
+
+2025-04-08T17:03:25.835661 [WARNING] RequestID: 32b5f02c-88da-42c5-87de-889d63284d9d - DELETE /api/products - Status: 400 - Response time: 1.839s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Rate limit approaching for IP: 192.168.251.15
+
+2025-04-08T17:03:25.835695 [CRITICAL] RequestID: 725fc482-69c8-4e3e-92f1-df02fe4a5871 - PATCH /api/products - Status: 204 - Response time: 2.041s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 63, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 106, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 92, in execute_query
+    raise AuthenticationError('Failed to process request: Authentication failed')
+AuthenticationError: Connection refused
+
+2025-04-08T17:03:25.835735 [ERROR] RequestID: 59df613f-0e4e-45a7-a040-19fefa917ce3 - DELETE /api/orders - Status: 503 - Response time: 0.597s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 112, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 42, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 64, in execute_query
+    raise InternalServerError('Failed to process request: Invalid input')
+InternalServerError: Invalid input
+
+2025-04-08T17:03:25.835763 [WARNING] RequestID: d8f69cd4-3c84-4b08-b95d-ea3b77ed0f8e - PATCH /api/users - Status: 204 - Response time: 2.723s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Memory usage approaching threshold: 90%
+
+2025-04-08T17:03:25.835782 [DEBUG] RequestID: af71b822-d1c1-46ca-ba8a-a2f91f1c39fa - POST /api/users - Status: 401 - Response time: 2.447s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835824 [DEBUG] RequestID: a0dc8524-4168-47b4-b48b-9cd49301e9b2 - PUT /api/users - Status: 404 - Response time: 4.669s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835839 [INFO] RequestID: eb285160-663f-4001-8171-40a1795f8561 - POST /api/auth - Status: 403 - Response time: 4.359s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Performance: Memory usage: 562MB
+
+2025-04-08T17:03:25.835858 [WARNING] RequestID: 2d83e979-d00f-47b2-adb1-d8ce528817bd - PUT /api/users - Status: 204 - Response time: 4.527s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.254.14
+
+2025-04-08T17:03:25.835877 [DEBUG] RequestID: e549031f-3b18-46b4-89dc-7cc9d4030bd6 - DELETE /api/users - Status: 403 - Response time: 4.832s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+2025-04-08T17:03:25.835891 [WARNING] RequestID: 9ff034e1-548d-4958-9946-5eeb75c29fc2 - PATCH /api/payments - Status: 401 - Response time: 3.791s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Rate limit approaching for IP: 192.168.241.80
+
+2025-04-08T17:03:25.835909 [WARNING] RequestID: 9b78dd17-2b92-4d68-93e7-bccc08be6860 - POST /api/products - Status: 400 - Response time: 2.445s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Slow database query detected: 1206ms
+
+2025-04-08T17:03:25.835927 [ERROR] RequestID: 998f91b3-6492-4dfc-b64f-a0f4625737b0 - GET /api/payments - Status: 200 - Response time: 0.658s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 131, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 34, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 69, in execute_query
+    raise ServiceUnavailableError('Failed to process request: Connection refused')
+ServiceUnavailableError: Authentication failed
+
+2025-04-08T17:03:25.835937 [INFO] RequestID: 4c13a3fd-2f91-43a6-8342-01bf6675297a - POST /api/auth - Status: 404 - Response time: 3.377s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Memory usage: 212MB
+
+2025-04-08T17:03:25.835946 [ERROR] RequestID: b9865b7b-c570-471b-8b44-a80e8498be3b - GET /api/payments - Status: 502 - Response time: 0.868s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Traceback (most recent call last):
+  File "app/api/routes.py", line 76, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 43, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 34, in execute_query
+    raise InternalServerError('Failed to process request: Timeout exceeded')
+InternalServerError: Authentication failed
+
+2025-04-08T17:03:25.835956 [ERROR] RequestID: eb4694de-7cde-4caf-a4a0-97b0cc287d70 - POST /api/users - Status: 204 - Response time: 1.802s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 143, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 100, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 62, in execute_query
+    raise AuthenticationError('Failed to process request: Authentication failed')
+AuthenticationError: Connection refused
+
+2025-04-08T17:03:25.835967 [CRITICAL] RequestID: 5a2c8b6f-5006-4d48-9f0a-2bb874342b30 - PUT /api/users - Status: 200 - Response time: 4.441s - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Traceback (most recent call last):
+  File "app/api/routes.py", line 138, in process_request
+    response = service.handle_request(request_data)
+  File "app/services/request_handler.py", line 114, in handle_request
+    result = database.execute_query(query)
+  File "app/database/connector.py", line 97, in execute_query
+    raise TimeoutError('Failed to process request: Timeout exceeded')
+TimeoutError: Timeout exceeded
+
+2025-04-08T17:03:25.835978 [INFO] RequestID: bff90224-a8eb-409b-910b-2e40bd080824 - GET /api/users - Status: 502 - Response time: 3.874s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Performance: Memory usage: 509MB
+
+2025-04-08T17:03:25.835986 [INFO] RequestID: cd23c0bd-0a5d-42dc-aa7f-86b6530c23d3 - PUT /api/payments - Status: 502 - Response time: 4.248s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Performance: Cache hit ratio: 93%
+
+2025-04-08T17:03:25.835994 [INFO] RequestID: 67576b96-2a47-4491-9cae-fe444fe87596 - GET /api/auth - Status: 400 - Response time: 0.495s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: CPU usage: 24%
+
+2025-04-08T17:03:25.836004 [INFO] RequestID: d738b70c-8cd5-4b15-ab1f-b927ddf82392 - DELETE /api/orders - Status: 403 - Response time: 0.618s - User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Performance: Cache hit ratio: 95%
+
+2025-04-08T17:03:25.836012 [WARNING] RequestID: 761a84f9-a526-4913-8161-a14e0801ddf4 - GET /api/users - Status: 401 - Response time: 3.298s - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15
+Deprecated API endpoint called: /api/orders/v1
+
+2025-04-08T17:03:25.836021 [DEBUG] RequestID: 44e73112-ee1c-488f-a509-00aa83043c26 - PUT /api/products - Status: 201 - Response time: 1.417s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+
+2025-04-08T17:03:25.836027 [CRITICAL] RequestID: 592aefc5-8e26-4d69-9a26-aa983aa0fee0 - PUT /api/users - Status: 502 - Response time: 0.064s - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15

@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+httpx
+qdrant-client
+python-multipart
+mistralai
+python-dotenv

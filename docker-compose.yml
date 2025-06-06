@@ -1,0 +1,136 @@
+services:
+  api_gateway:
+    build:
+      context: ./api_gateway/app
+      dockerfile: ../../docker_config/Dockerfile.api_gateway
+    volumes:
+      - ./api_gateway/app:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    ports:
+      - "8000:8000"
+    networks: [lognet]
+
+  orchestrator:
+    build:
+      context: ./orchestrator/app
+      dockerfile: ../../docker_config/Dockerfile.orchestrator
+    volumes:
+      - ./orchestrator/app:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
+    ports:
+      - "8001:8001"
+    networks: [lognet]
+
+  preprocessing:
+    build:
+      context: ./preprocessing_service/app
+      dockerfile: ../../docker_config/Dockerfile.preprocessing
+    volumes:
+      - ./preprocessing_service/app:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002", "--reload"]
+    ports:
+      - "8002:8002"
+    networks: [lognet]
+
+  monitoring:
+    build:
+      context: ./monitoring/app
+      dockerfile: ../../docker_config/Dockerfile.monitoring
+    volumes:
+      - ./monitoring/app:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8003", "--reload"]
+    ports:
+      - "8003:8003"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks: [lognet]
+
+  rag_service:
+    build:
+      context: ./rag_service/app
+      dockerfile: ../../docker_config/Dockerfile.rag
+    volumes:
+      - ./rag_service/app:/app
+      - ./.env:/app/.env
+    command: ["streamlit", "run", "main.py", "--server.port=8004", "--server.address=0.0.0.0"]
+    ports:
+      - "8004:8004"
+    networks: [lognet]
+
+  error_detector:
+    build:
+      context: ./agents/error_detector
+      dockerfile: ../../docker_config/Dockerfile.agent
+    volumes:
+      - ./agents/error_detector:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8005", "--reload"]
+    ports:
+      - "8005:8005"
+    networks: [lognet]
+
+  performance_analyzer:
+    build:
+      context: ./agents/performance_analyzer
+      dockerfile: ../../docker_config/Dockerfile.agent
+    volumes:
+      - ./agents/performance_analyzer:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8006", "--reload"]
+    ports:
+      - "8006:8006"
+    networks: [lognet]
+
+  aggregator:
+    build:
+      context: ./agents/aggregator
+      dockerfile: ../../docker_config/Dockerfile.agent
+    volumes:
+      - ./agents/aggregator:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8007"]
+    ports:
+      - "8007:8007"
+    networks: [lognet]
+
+  chat:
+    build:
+      context: ./chat/app
+      dockerfile: ../../docker_config/Dockerfile.chat
+    volumes:
+      - ./chat/app:/app
+      - ./.env:/app/.env
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8008", "--reload"]
+    ports:
+      - "8008:8008"
+    networks: [lognet]
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: logs
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks: [lognet]
+
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    networks: [lognet]
+
+networks:
+  lognet:
+
+volumes:
+  pg_data:
